@@ -1,0 +1,91 @@
+.title{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+
+}
+.box-title{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    backdrop-filter: blur(5px);/* 背景模糊 */
+    transition: .5s;
+}
+.box-title:hover{
+    backdrop-filter: blur(0px);/* 背景模糊 */
+}
+
+.tab {
+    overflow: hidden; /* 隐藏超出容器的内容 */
+    position: -webkit-sticky; /* Safari 支持 */
+    position: sticky; /* 设置粘性 */
+    top: 1%; /* 距离顶部的距离 */
+    left:auto 0;
+    width:164px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.801); /* 背景颜色 */
+    box-shadow: 0px 0px 20px rgba(135, 135, 135, 0.427);
+    border-radius: 20px;
+    z-index: 1000; /* 确保在其他内容之上 */
+    overflow-x: auto; /* 横向滚动条 */
+    white-space: nowrap; /* 防止内容换行 */
+    overflow-x: hidden; /* 隐藏横向滚轮 */
+    backdrop-filter: blur(4px);/* 背景模糊 */
+    transition: all .8s ease-in-out,
+                .4s width .3s ease;
+}
+.tab:hover{
+    width:100%;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 50px rgb(163, 163, 163);
+}
+.tab button {
+    margin:0px;
+    padding: 14px 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    border: none; /* 无边框 */
+    outline: none; /* 无轮廓 */
+    cursor: pointer; /* 光标为指针 */
+    transition:all .3s ease-out;
+    font-size: larger;
+}
+.tab button:hover {
+    background-color: #ff3737;
+}
+
+.tabcontent {
+    display: none; /* 默认不显示内容 */
+    padding: 6px 12px;
+    border-top: none; /* 无顶边框 */
+    font-size: larger;
+    padding: 10px 20px; /* 标签的内边距 */
+}
+.tabcontent.active {
+    display: block; /* 显示激活的内容 */
+}
+
+.tabcontent p {
+    margin: 20px;
+    padding: 20px;
+    line-height: 32px; /* 行高 */
+    background-color: #ffffff;
+    transition: all .5s ease-out;
+    cursor: pointer; /* 光标为指针 */
+    border-radius: 8px;
+}
+.tabcontent p:hover {
+    background-color: #ff480085;
+}
+.tabcontent p:active{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+}
