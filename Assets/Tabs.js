@@ -23,3 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(`button[onclick*="${activeTab}"]`).classList.add('active');
     }
 });
+
+function OpenTab(pageUrl) {
+    const iframe = document.getElementById('TabTab');
+    iframe.src = pageUrl; // 设置 iframe 的 src
+    iframe.onload = () => {
+        console.log('页面加载成功:', pageUrl);
+    };
+    iframe.onerror = () => {
+        console.error('页面加载失败:', pageUrl);
+    };
+}

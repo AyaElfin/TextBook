@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     font-size: 35px;
-
 }
 .box-title{
     position: absolute;
@@ -26,41 +25,59 @@
     overflow: hidden; /* 隐藏超出容器的内容 */
     position: -webkit-sticky; /* Safari 支持 */
     position: sticky; /* 设置粘性 */
-    top: 1%; /* 距离顶部的距离 */
+    top: 0; /* 距离顶部的距离 */
     left:auto 0;
     width:164px;
     margin: auto;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.801); /* 背景颜色 */
-    box-shadow: 0px 0px 20px rgba(135, 135, 135, 0.427);
+    box-shadow: 0px 0px 20px rgb(166, 166, 166);
     border-radius: 20px;
     z-index: 1000; /* 确保在其他内容之上 */
     overflow-x: auto; /* 横向滚动条 */
     white-space: nowrap; /* 防止内容换行 */
-    overflow-x: hidden; /* 隐藏横向滚轮 */
+    overflow-x: auto; /* 隐藏横向滚轮 */
     backdrop-filter: blur(4px);/* 背景模糊 */
-    transition: all .8s ease-in-out,
-                .4s width .3s ease;
+    transition: .4s .3s ease-out;
+}
+.tab::-webkit-scrollbar{
+    display: none; /* 隐藏滚动条 */
 }
 .tab:hover{
     width:100%;
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0px 0px 50px rgb(163, 163, 163);
+    box-shadow: 0px 0px 1000px rgb(0, 0, 0);
 }
+
 .tab button {
-    margin:0px;
-    padding: 14px 35px;
+    margin:0px 0px;
+    padding: 14px 35px 16px 35px;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 20px;
     border: none; /* 无边框 */
     outline: none; /* 无轮廓 */
-    cursor: pointer; /* 光标为指针 */
-    transition:all .3s ease-out;
     font-size: larger;
+    transition: .3s ease-out;
 }
-.tab button:hover {
-    background-color: #ff3737;
+.tab button:active{
+    filter: blur(50px);
 }
+.tab button:nth-child(1):hover{
+    background-color: #F53832;
+}
+.tab button:nth-child(2):hover{
+    background-color: #B4ACBC;
+}
+.tab button:nth-child(3):hover{
+    background-color: #FCB238;
+}
+.tab button:nth-child(4):hover{
+    background-color: #FC8A3A;
+}
+.tab button:nth-child(5):hover{
+    background-color: #F9D748;
+}
+
 
 .tabcontent {
     display: none; /* 默认不显示内容 */
@@ -83,9 +100,21 @@
     border-radius: 8px;
 }
 .tabcontent p:hover {
-    background-color: #ff480085;
+    background-color: #ff7138;
 }
 .tabcontent p:active{
     background-color: #ff0000;
     color: rgb(255, 255, 255);
+}
+
+iframe{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    margin: 0px 0 0 0;
+    padding: 0px 0 0 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* 无边框 */
+    outline: none; /* 无轮廓 */
 }
